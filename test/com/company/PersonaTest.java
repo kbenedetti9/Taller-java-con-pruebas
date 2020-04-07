@@ -97,4 +97,61 @@ class PersonaTest {
         Assertions.assertEquals('H', personaConMedidas.getSexo());
     }
 
+    @Test
+    void generarDNICantidadCaracteresTest() {
+        Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
+        String DNI = personaConMedidas.getDNI();
+        Assertions.assertEquals(9, DNI.length());
+    }
+
+    @Test
+    void DNIUltimoEsLetraTest() {
+        Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
+        String DNI = personaConMedidas.getDNI();
+        char ultimo = DNI.charAt(8);
+        Assertions.assertEquals(true, Character.isLetter(ultimo));
+    }
+
+    @Test
+    void DNISonDigitosTest() {
+        Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
+        String DNI = personaConMedidas.getDNI();
+        char primero = DNI.charAt(0);
+        char segundo = DNI.charAt(1);
+        char tercero = DNI.charAt(2);
+        char cuarto = DNI.charAt(3);
+        char quinto = DNI.charAt(4);
+        char sexto = DNI.charAt(5);
+        char septimo = DNI.charAt(6);
+        char octavo = DNI.charAt(7);
+        Assertions.assertEquals(true, Character.isDigit(primero));
+        Assertions.assertEquals(true, Character.isDigit(segundo));
+        Assertions.assertEquals(true, Character.isDigit(tercero));
+        Assertions.assertEquals(true, Character.isDigit(cuarto));
+        Assertions.assertEquals(true, Character.isDigit(quinto));
+        Assertions.assertEquals(true, Character.isDigit(sexto));
+        Assertions.assertEquals(true, Character.isDigit(septimo));
+        Assertions.assertEquals(true, Character.isDigit(octavo));
+    }
+
+    @Test
+    void generarLetraTest() {
+        Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
+        char letra = personaConMedidas.generarLetra();
+        Assertions.assertEquals(true, Character.isLetter(letra));
+    }
+
+    @Test
+    void generarLetraPersonaPorDefectoTest() {
+        Persona personaConMedidas = new Persona();
+        char letra = personaConMedidas.generarLetra();
+        Assertions.assertEquals(true, Character.isLetter(letra));
+    }
+
+    @Test
+    void generarLetraPersonaSinMedidasTest() {
+        Persona personaSinMedidas = new Persona("Juan", 18, 'H');
+        char letra = personaSinMedidas.generarLetra();
+        Assertions.assertEquals(true, Character.isLetter(letra));
+    }
 }
