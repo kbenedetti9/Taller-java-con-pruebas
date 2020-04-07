@@ -20,6 +20,7 @@ public class Persona {
         sexo = SEXO;
         peso = 0;
         altura = 0;
+        generarDNI();
     }
 
     public Persona(String nombre, int edad, char sexo) {
@@ -28,6 +29,7 @@ public class Persona {
         this.sexo = sexo;
         peso = 0;
         altura = 0;
+        generarDNI();
     }
 
     public Persona(String nombre, int edad, char sexo, double peso, double altura) {
