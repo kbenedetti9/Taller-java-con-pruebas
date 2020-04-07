@@ -14,7 +14,7 @@ public class Main {
                 case 2:
                     String nombre = JOptionPane.showInputDialog("Ingrese su nombre");
                     int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad"));
-                    char sexo = JOptionPane.showInputDialog("Ingrese el se (H)Hombre (M)Mujer").charAt(0);
+                    char sexo = JOptionPane.showInputDialog("Ingrese el se (H)Hombre (F)Femenino").charAt(0);
                     double peso = Double.parseDouble(JOptionPane.showInputDialog("Ingrese su peso en Kg"));
                     double altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese su altura en mts"));
                     Persona nuevaPersona = new Persona(nombre, edad, sexo, peso, altura);
