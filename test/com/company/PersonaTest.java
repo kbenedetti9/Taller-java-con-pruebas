@@ -78,4 +78,23 @@ class PersonaTest {
         boolean mayor = personaConMedidas.esMayorDeEdad(personaConMedidas.getEdad());
         Assertions.assertEquals(true, mayor);
     }
+
+    @Test
+    void comprobarSexoDefinidoHTest() {
+        Persona personaConMedidas = new Persona("Juan", 18, 'H', 70, 1.70);
+        Assertions.assertEquals('H', personaConMedidas.getSexo());
+    }
+
+    @Test
+    void comprobarSexoDefinidoMTest() {
+        Persona personaConMedidas = new Persona("Diana", 25, 'F', 70, 1.65);
+        Assertions.assertEquals('F', personaConMedidas.getSexo());
+    }
+
+    @Test
+    void comprobarSexoInvalidoTest() {
+        Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
+        Assertions.assertEquals('H', personaConMedidas.getSexo());
+    }
+
 }

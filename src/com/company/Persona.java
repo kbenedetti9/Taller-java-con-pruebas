@@ -29,6 +29,7 @@ public class Persona {
         this.sexo = sexo;
         peso = 0;
         altura = 0;
+        comprobarSexo();
         generarDNI();
     }
 
@@ -38,6 +39,7 @@ public class Persona {
         this.sexo = sexo;
         this.peso = peso;
         this.altura = altura;
+        comprobarSexo();
         generarDNI();
     }
 
@@ -62,7 +64,7 @@ public class Persona {
         return false;
     }
 
-    public void comprobarSexo(char sexo) {
+    public void comprobarSexo() {
         if (sexo != 'F' && sexo != 'H') {
             this.sexo = SEXO;
         }
@@ -121,6 +123,10 @@ public class Persona {
 
     public double getAltura() {
         return altura;
+    }
+
+    public String getDNI() {
+        return DNI;
     }
 
     public void setAltura(double altura) {
