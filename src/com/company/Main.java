@@ -61,17 +61,20 @@ public class Main {
                     int numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de contraseñas que desea generar"));
 
                     Password listaContrasenas[] = new Password[numero];
+                    boolean estadoDeContrasenas[] = new boolean[numero];
+                    String estado = "no";
 
                     for (int i = 0; i < numero; i++) {
-                        Password contrasena = new Password();
                         int longitud = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el tamaño para la contraseña numero #" + i));
-                        contrasena.setLongitud(longitud);
-                        contrasena.generarContrasena();
-
+                        Password contrasena = new Password(longitud);
                         listaContrasenas[i] = contrasena;
-
-                        JOptionPane.showMessageDialog(null, "La contraseña #" + i + "generada fue " + listaContrasenas[i].getLongitud());
+                        estadoDeContrasenas[i] = contrasena.esFuerte(listaContrasenas[i].getContrasena());
+                        if (estadoDeContrasenas[i]) {
+                            estado = "si";
+                        }
+                        JOptionPane.showMessageDialog(null, "La contraseña #" + i + "generada fue: " + listaContrasenas[i].getContrasena() + " y " + estado + " es fuerte");
                     }
+
                     break;
             }
 
