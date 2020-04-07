@@ -8,6 +8,7 @@ public class Password {
 
     public Password() {
         this.longitud = LONGITUD;
+        contrasena = generarContrasena();
     }
 
     public Password(int longitud) {
@@ -23,9 +24,9 @@ public class Password {
         for (int i = 0; i < contrasena.length(); i++) {
             if (contrasena.charAt(i) >= 65 && contrasena.charAt(i) <= 90) {
                 conteoMayuscula++;
-            } else if (contrasena.charAt(i) >= 97 && this.contrasena.charAt(i) <= 122) {
+            } else if (contrasena.charAt(i) >= 97 && contrasena.charAt(i) <= 122) {
                 conteoMiniscula++;
-            } else if (contrasena.charAt(i) >= 48 && this.contrasena.charAt(i) <= 57) {
+            } else if (contrasena.charAt(i) >= 48 && contrasena.charAt(i) <= 57) {
                 conteoNumero++;
             }
 

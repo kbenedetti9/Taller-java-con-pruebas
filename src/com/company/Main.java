@@ -74,7 +74,6 @@ public class Main {
                         }
                         JOptionPane.showMessageDialog(null, "La contraseña #" + i + "generada fue: " + listaContrasenas[i].getContrasena() + " y " + estado + " es fuerte");
                     }
-
                     break;
             }
 
