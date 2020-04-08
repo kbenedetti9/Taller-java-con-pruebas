@@ -2,7 +2,7 @@ package com.company;
 
 public class Cuenta {
 
-    private String titular;
+    private final String titular;
     private double cantidad;
 
 
@@ -17,10 +17,6 @@ public class Cuenta {
 
     public String getTitular() {
         return titular;
-    }
-
-    public void setTitular(String titular) {
-        this.titular = titular;
     }
 
     public double getCantidad() {

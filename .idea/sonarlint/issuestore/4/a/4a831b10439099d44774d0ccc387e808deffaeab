@@ -1,0 +1,30 @@
+
+W"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(°€àâ8„’ª–•.
+[
+squid:S106 "9Replace this use of System.out or System.err by a logger.(°ÏÔŞüÿÿÿÿ8ùÌ«–•.
+[
+squid:S106'"9Replace this use of System.out or System.err by a logger.(Ò¬Öáùÿÿÿÿ8ùÌ«–•.
+V
+squid:S106+"9Replace this use of System.out or System.err by a logger.(ôû†©8ùÌ«–•.
+Vsquid:S1197?"8Move the array designator from the variable to the type.(î‰Æª8şÈ–•.
+[
+squid:S106""9Replace this use of System.out or System.err by a logger.(Å˜à£úÿÿÿÿ8ùÌ«–•.
+V
+squid:S106-"9Replace this use of System.out or System.err by a logger.(ú²Õö8ùÌ«–•.
+U
+squid:S1066"9Replace this use of System.out or System.err by a logger.(ëA8ùÌ«–•.
+[squid:S1197@"8Move the array designator from the variable to the type.(¯–˜ˆúÿÿÿÿ8Û×í¨•.
+[
+squid:S1063"9Replace this use of System.out or System.err by a logger.(ƒÁ³şÿÿÿÿ8ùÌ«–•.
+isquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(°€àâ8„’ª–•.
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Çµí‘8íí¹–•.
+[
+squid:S1068"9Replace this use of System.out or System.err by a logger.(ÎÌÄäıÿÿÿÿ8ùÌ«–•.
+[
+squid:S106!"9Replace this use of System.out or System.err by a logger.(¬ªò©øÿÿÿÿ8ùÌ«–•.
+V
+squid:S1061"9Replace this use of System.out or System.err by a logger.(ôï †8ùÌ«–•.
+V
+squid:S1067"9Replace this use of System.out or System.err by a logger.(×Â¡Ø8ùÌ«–•.
+V
+squid:S106%"9Replace this use of System.out or System.err by a logger.(©Ìâç8ùÌ«–•.

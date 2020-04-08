@@ -4,12 +4,13 @@ public class Persona {
 
     private String nombre;
     private int edad;
-    private String DNI;
+    private String dni;
     private char sexo;
     private double peso;
     private double altura;
 
-    private final static char SEXO = 'H';
+    private final static char HOMBRE = 'H';
+    private final static char MUJER = 'F';
     private final static int IDEAL = -1;
     private final static int BAJO = 0;
     private final static int SOBREPESO = 1;
@@ -17,20 +18,20 @@ public class Persona {
     public Persona() {
         nombre = "";
         edad = 0;
-        sexo = SEXO;
+        sexo = HOMBRE;
         peso = 0;
         altura = 0;
-        generarDNI();
+        dni = generarDNI();
     }
 
     public Persona(String nombre, int edad, char sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
-        peso = 0;
-        altura = 0;
-        comprobarSexo();
-        generarDNI();
+        this.peso = 0;
+        this.altura = 0;
+        this.sexo = comprobarSexo();
+        this.dni = generarDNI();
     }
 
     public Persona(String nombre, int edad, char sexo, double peso, double altura) {
@@ -39,8 +40,8 @@ public class Persona {
         this.sexo = sexo;
         this.peso = peso;
         this.altura = altura;
-        comprobarSexo();
-        generarDNI();
+        this.sexo = comprobarSexo();
+        this.dni = generarDNI();
     }
 
     public int calcularIMC(double peso, double altura) {
@@ -64,10 +65,12 @@ public class Persona {
         return false;
     }
 
-    public void comprobarSexo() {
-        if (sexo != 'F' && sexo != 'H') {
-            this.sexo = SEXO;
+    public char comprobarSexo() {
+        if (sexo != MUJER && sexo != HOMBRE) {
+            return HOMBRE;
         }
+
+        return sexo;
     }
 
     public char generarLetra() {
@@ -77,16 +80,16 @@ public class Persona {
         return letra;
     }
 
-    public void generarDNI() {
-        String DNI = "";
+    public String generarDNI() {
+        String dni = "";
         char letra = ' ';
         for (int i = 0; i < 8; i++) {
             int numero = (int) (9 * Math.random());
-            DNI += numero + "";
+            dni += numero + "";
         }
         letra = generarLetra();
-        DNI += letra;
-        this.DNI = DNI;
+        dni += letra;
+        return dni;
     }
 
     public String getNombre() {
@@ -125,8 +128,8 @@ public class Persona {
         return altura;
     }
 
-    public String getDNI() {
-        return DNI;
+    public String getDni() {
+        return dni;
     }
 
     public void setAltura(double altura) {
@@ -138,10 +141,12 @@ public class Persona {
         return "Persona{" +
                 "nombre='" + nombre + '\'' +
                 ", edad=" + edad +
-                ", DNI='" + DNI + '\'' +
+                ", DNI='" + dni + '\'' +
                 ", sexo=" + sexo +
                 ", peso=" + peso +
                 ", altura=" + altura +
                 '}';
     }
+
+  
 }

@@ -1,0 +1,10 @@
+
+Lsquid:S2140-")Use "java.util.Random.nextInt()" instead.(»‘±ÿÿÿÿÿ8’­ë••.
+Gsquid:S21401")Use "java.util.Random.nextInt()" instead.(¹†ƒÅ8’­ë••.
+Lsquid:S21404")Use "java.util.Random.nextInt()" instead.(áìË§øÿÿÿÿ8’­ë••.
+9squid:S1643."Use a StringBuilder instead.(©¯×8’­ë••.
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(¸ÁæÀøÿÿÿÿ8êš×••.
+?squid:S16435"Use a StringBuilder instead.(™Îôøÿÿÿÿ8’­ë••.
+?squid:S16432"Use a StringBuilder instead.(äºáÿÿÿÿÿ8’­ë••.
+‰squid:S1845"fRename field "LONGITUD" to prevent any misunderstanding/clash with field "longitud" defined on line 5.(¸ÁæÀøÿÿÿÿ8´»Ù••.
+Gsquid:S2140+")Use "java.util.Random.nextInt()" instead.(¦·¯ª8’­ë••.

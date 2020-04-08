@@ -1,0 +1,15 @@
+
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(÷·±½ÿÿÿÿÿ8²ÉŒ”•.
+\squid:S1854R"9Remove this useless assignment to local variable "letra".(äº¨‡þÿÿÿÿ8…Š¶”•.
+|squid:S1845"^Rename field "SEXO" to prevent any misunderstanding/clash with field "sexo" defined on line 8.(£¾‹Ñ8²ÉŒ”•.
+rsquid:S00116"NRename this field "DNI" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èüöšýÿÿÿÿ8²ÉŒ”•.
+_squid:S1126="AReplace this if-then-else statement by a single return statement.(éº©í8Ýž ”•.
+?squid:S1643U"Use a StringBuilder instead.(ŽÜÉõüÿÿÿÿ8…Š¶”•.
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(²˜åù8²ÉŒ”•.
+qsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(£¾‹Ñ8²ÉŒ”•.
+\squid:S1854J"9Remove this useless assignment to local variable "letra".(äº¨‡þÿÿÿÿ8Š¢·”•.
+Gsquid:S2140K")Use "java.util.Random.nextInt()" instead.(ý´Ò‚8Š¢·”•.
+vsquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(²›Û›þÿÿÿÿ8²ÉŒ”•.
+psquid:S00117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ìõ¢8…Š¶”•.
+_squid:HiddenFieldCheckQ"6Rename "DNI" which hides the field declared at line 7.(’ìõ¢8…Š¶”•.
+Fsquid:S2140T")Use "java.util.Random.nextInt()" instead.(í¦št8…Š¶”•.

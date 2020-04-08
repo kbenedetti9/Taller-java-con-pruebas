@@ -22,15 +22,17 @@ public class Password {
         int conteoMiniscula = 0;
         int conteoNumero = 0;
         for (int i = 0; i < contrasena.length(); i++) {
-            if (contrasena.charAt(i) >= 65 && contrasena.charAt(i) <= 90) {
+            if (Character.isUpperCase(contrasena.charAt(i))) {
                 conteoMayuscula++;
-            } else if (contrasena.charAt(i) >= 97 && contrasena.charAt(i) <= 122) {
+            } else if (Character.isLowerCase(contrasena.charAt(i))) {
                 conteoMiniscula++;
-            } else if (contrasena.charAt(i) >= 48 && contrasena.charAt(i) <= 57) {
+            } else if (Character.isDigit(contrasena.charAt(i))) {
                 conteoNumero++;
             }
 
-            if (conteoMayuscula > 2 && conteoMiniscula > 1 && conteoNumero > 5) {
+            if (verificacionNumero(conteoMayuscula, 2) &&
+                    verificacionNumero(conteoMiniscula, 1) &&
+                    verificacionNumero(conteoNumero, 5)) {
                 verificacion = true;
             }
         }
@@ -40,16 +42,16 @@ public class Password {
     public String generarContrasena() {
         String password = "";
         for (int i = 0; i < longitud; i++) {
-            int eleccion = ((int) Math.floor(Math.random() * 3 + 1));
+            int eleccion = (generarNumeroAleatorio(4,1,1));
             if (eleccion == 1) {
-                char minusculas = (char) ((int) Math.floor(Math.random() * (123 - 97) + 97));
+                char minusculas = (char) (generarNumeroAleatorio(123,97,97));
                 password += minusculas;
             } else {
                 if (eleccion == 2) {
-                    char mayusculas = (char) ((int) Math.floor(Math.random() * (91 - 65) + 65));
+                    char mayusculas = (char) (generarNumeroAleatorio(91,65,65));
                     password += mayusculas;
                 } else {
-                    char numeros = (char) ((int) Math.floor(Math.random() * (58 - 48) + 48));
+                    char numeros = (char) (generarNumeroAleatorio(58,48,48));
                     password += numeros;
                 }
             }
@@ -69,4 +71,18 @@ public class Password {
     public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
+
+    public boolean verificacionNumero(int conteo, int numero) {
+
+        if (conteo > numero) {
+            return true;
+        }
+        return false;
+    }
+
+    public int generarNumeroAleatorio(int n1, int n2, int n3) {
+
+       return ((int) Math.floor(Math.random() * (n1 - n2) + n3));
+    }
+
 }

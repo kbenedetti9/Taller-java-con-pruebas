@@ -3,8 +3,6 @@ package com.company;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class PersonaTest {
 
     @Test
@@ -100,14 +98,14 @@ class PersonaTest {
     @Test
     void generarDNICantidadCaracteresTest() {
         Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
-        String DNI = personaConMedidas.getDNI();
+        String DNI = personaConMedidas.getDni();
         Assertions.assertEquals(9, DNI.length());
     }
 
     @Test
     void DNIUltimoEsLetraTest() {
         Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
-        String DNI = personaConMedidas.getDNI();
+        String DNI = personaConMedidas.getDni();
         char ultimo = DNI.charAt(8);
         Assertions.assertEquals(true, Character.isLetter(ultimo));
     }
@@ -115,7 +113,7 @@ class PersonaTest {
     @Test
     void DNISonDigitosTest() {
         Persona personaConMedidas = new Persona("Juan", 18, 'T', 70, 1.70);
-        String DNI = personaConMedidas.getDNI();
+        String DNI = personaConMedidas.getDni();
         char primero = DNI.charAt(0);
         char segundo = DNI.charAt(1);
         char tercero = DNI.charAt(2);
