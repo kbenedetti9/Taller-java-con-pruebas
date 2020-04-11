@@ -29,29 +29,23 @@ public class Password {
             } else if (Character.isDigit(contrasena.charAt(i))) {
                 conteoNumero++;
             }
-
-            if (verificacionNumero(conteoMayuscula, 2) &&
-                    verificacionNumero(conteoMiniscula, 1) &&
-                    verificacionNumero(conteoNumero, 5)) {
-                verificacion = true;
-            }
         }
-        return verificacion;
+        return verificacion(conteoMayuscula, conteoMiniscula, conteoNumero);
     }
 
     public String generarContrasena() {
         String password = "";
         for (int i = 0; i < longitud; i++) {
-            int eleccion = (generarNumeroAleatorio(4,1,1));
+            int eleccion = (generarNumeroAleatorio(4, 1, 1));
             if (eleccion == 1) {
-                char minusculas = (char) (generarNumeroAleatorio(123,97,97));
+                char minusculas = (char) (generarNumeroAleatorio(123, 97, 97));
                 password += minusculas;
             } else {
                 if (eleccion == 2) {
-                    char mayusculas = (char) (generarNumeroAleatorio(91,65,65));
+                    char mayusculas = (char) (generarNumeroAleatorio(91, 65, 65));
                     password += mayusculas;
                 } else {
-                    char numeros = (char) (generarNumeroAleatorio(58,48,48));
+                    char numeros = (char) (generarNumeroAleatorio(58, 48, 48));
                     password += numeros;
                 }
             }
@@ -82,7 +76,17 @@ public class Password {
 
     public int generarNumeroAleatorio(int n1, int n2, int n3) {
 
-       return ((int) Math.floor(Math.random() * (n1 - n2) + n3));
+        return ((int) Math.floor(Math.random() * (n1 - n2) + n3));
+    }
+
+    private boolean verificacion(int conteoMayuscula, int conteoMiniscula, int conteoNumero) {
+
+        if (verificacionNumero(conteoMayuscula, 2) &&
+                verificacionNumero(conteoMiniscula, 1) &&
+                verificacionNumero(conteoNumero, 5)) {
+            return true;
+        }
+        return false;
     }
 
 }
