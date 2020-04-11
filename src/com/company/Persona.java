@@ -46,16 +46,36 @@ public class Persona {
 
     public int calcularIMC(double peso, double altura) {
         double resultado;
-        resultado = peso / (Math.pow(altura, 2));
+        resultado = calculoDeIMC(peso, altura);
 
-        if (resultado < 20) {
+        if (esPesoIdeal(20, resultado)) {
             return IDEAL;
-        } else if (resultado >= 20 && resultado <= 25) {
+        } else if (esPesoBajo(20, 25, resultado)) {
             return BAJO;
-        } else if (resultado > 25) {
+        } else if (esSobrepeso(25, resultado)) {
             return SOBREPESO;
         }
         return 0;
+    }
+
+    private boolean esPesoIdeal(int num, double resultado) {
+        return resultado < num;
+    }
+
+    private boolean esPesoBajo(int num1, int num2, double resultado) {
+        if (resultado >= num1 && resultado <= num2) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean esSobrepeso(int num, double resultado) {
+        return resultado > num;
+    }
+
+    private double calculoDeIMC(double peso, double altura) {
+        double resultado = peso / (Math.pow(altura, 2));
+        return resultado;
     }
 
     public boolean esMayorDeEdad(int edad) {
@@ -148,5 +168,5 @@ public class Persona {
                 '}';
     }
 
-  
+
 }

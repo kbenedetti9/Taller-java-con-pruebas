@@ -24,8 +24,7 @@ public class Password {
         for (int i = 0; i < contrasena.length(); i++) {
             if (Character.isUpperCase(contrasena.charAt(i))) {
                 conteoMayuscula++;
-            } else if (Character.isLowerCase(contrasena.cha
-                    rAt(i))) {
+            } else if (Character.isLowerCase(contrasena.charAt(i))) {
                 conteoMiniscula++;
             } else if (Character.isDigit(contrasena.charAt(i))) {
                 conteoNumero++;
